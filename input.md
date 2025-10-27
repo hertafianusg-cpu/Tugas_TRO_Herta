@@ -163,11 +163,11 @@ menjadikan ini masalah transportasi seimbang. Biaya transportasi per
 unit (dalam ribu Rupiah) adalah sebagai berikut:
 
   -------------------------------------------------------------------------
-  Dari/Ke                Toko 1           Toko 2           Toko 3
+ | Dari/Ke        |        Toko 1      |     Toko 2      |     Toko 3      |
   ---------------------- ---------------- ---------------- ----------------
-  Gudang A               10               15               20
+ | Gudang A       |        10          |     15          |      20         |
 
-  Gudang B               18               12               8
+ | Gudang B       |        18          |     12          |       8         |
   -------------------------------------------------------------------------
 
 Alokasi:
@@ -618,3 +618,4 @@ c)  Perbandingan Solusi dari Dua Software (Excel vs Python)
 **Kesimpulan**: Python unggul dalam skalabilitas, sementara Excel lebih
 baik untuk prototyping cepat. Untuk proyek ini, keduanya valid dan
 saling melengkapi.
+
