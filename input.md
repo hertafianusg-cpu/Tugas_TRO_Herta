@@ -1,19 +1,23 @@
+---
+title: Laporan Akhir
+---
+
 **Laporan Proyek**
 
 **Analisis dan Optimasi Sistem Distribusi Barang pada Perusahaan Retail
 Optima**
 
-![](./image1.png){width="2.71875in" height="2.71875in"}
+![](media/image1.png){width="2.71875in" height="2.71875in"}
 
 Disusun Oleh :
 
-  -----------------------------------------------------------------------
-  Nama              : Hertafianus Ge'e
-  ----------------- -----------------------------------------------------
-  Nim               : 231011401257
+  ---------------------------------
+  Nama     : Hertafianus Ge'e
+  -------- ------------------------
+  Nim      : 231011401257
 
-  Kelas             : 05TPLM009
-  -----------------------------------------------------------------------
+  Kelas    : 05TPLM009
+  ---------------------------------
 
 Dosen Pengampu : Agung Perdananto, S.Kom., M.Kom
 
@@ -26,8 +30,7 @@ Dosen Pengampu : Agung Perdananto, S.Kom., M.Kom
 **\
 DAFTAR ISI**
 
-**\
-**
+**\**
 
 **PENDAHULUAN**
 
@@ -62,6 +65,7 @@ DAFTAR ISI**
 
 2.  **Rumusan Masalah**
 
+<!-- -->
 
 1.  Bagaimana merumuskan model matematis untuk mengoptimalkan alokasi
     pengiriman barang guna meminimalkan total biaya transportasi, dengan
@@ -81,7 +85,11 @@ DAFTAR ISI**
     meningkatkan efisiensi sistem distribusi berdasarkan analisis
     sensitivitas dan hasil optimasi?
 
+<!-- -->
+
 3.  **Tujuan Proyek**
+
+<!-- -->
 
 1.  Menemukan alokasi pengiriman optimal yang meminimalkan total biaya
     transportasi.
@@ -91,6 +99,8 @@ DAFTAR ISI**
 
 3.  Memberikan rekomendasi strategis untuk meningkatkan efisiensi
     operasional distribusi RetailOptima.
+
+<!-- -->
 
 4.  **Manfaat dan ruang lingkup**
 
@@ -152,12 +162,12 @@ menjadikan ini masalah transportasi seimbang. Biaya transportasi per
 unit (dalam ribu Rupiah) adalah sebagai berikut:
 
   -------------------------------------------------------------------------
-  Dari/Ke                Toko 1           Toko 2           Toko 3       
-  ---------------------- ---------------- ---------------- ---------------- 
-  Gudang A               10               15                20          
+  Dari/Ke                Toko 1           Toko 2           Toko 3
+  ---------------------- ---------------- ---------------- ----------------
+  Gudang A               10               15               20
 
-  Gudang B               18               12                 8          
-  ------------------------------------------------------------------------- 
+  Gudang B               18               12               8
+  -------------------------------------------------------------------------
 
 Alokasi:
 
@@ -186,78 +196,77 @@ penambahan gudang, kenaikan biaya, atau peningkatan permintaan.
 
 1.  Variabel Keputusan
 
-> $$\mathbf{x}_{\mathbf{ij}}\mathbf{=}\text{Jumlah\ unit\ barang\ yang\ dikirim\ dari\ gudang\ }\mathbf{i}\text{\ ke\ toko\ }\mathbf{j}
-> $$di mana:
+> $$\mathbf{x}_{\mathbf{ij}}\mathbf{=}\text{Jumlah unit barang yang dikirim dari gudang }\mathbf{i}\text{ ke toko }\mathbf{j}$$
+> di mana:
 
--   $i = 1$(Gudang A - Jakarta), $i = 2$(Gudang B - Surabaya)
+- $i = 1$(Gudang A - Jakarta), $i = 2$(Gudang B - Surabaya)
 
--   $j = 1$(Toko 1 - Bandung), $j = 2$(Toko 2 - Yogyakarta),
-    $j = 3$(Toko 3 - Bali)
+- $j = 1$(Toko 1 - Bandung), $j = 2$(Toko 2 - Yogyakarta), $j = 3$(Toko
+  3 - Bali)
 
--   $x_{ij} \geq 0$untuk semua $i,j$(non-negatif)
+- $x_{ij} \geq 0$untuk semua $i,j$(non-negatif)
 
 > Variabel Spesifik:
 
--   $x_{11}$: Gudang A → Toko 1
+- $x_{11}$: Gudang A → Toko 1
 
--   $x_{12}$: Gudang A → Toko 2
+- $x_{12}$: Gudang A → Toko 2
 
--   $x_{13}$: Gudang A → Toko 3
+- $x_{13}$: Gudang A → Toko 3
 
--   $x_{21}$: Gudang B → Toko 1
+- $x_{21}$: Gudang B → Toko 1
 
--   $x_{22}$: Gudang B → Toko 2
+- $x_{22}$: Gudang B → Toko 2
 
--   $x_{23}$: Gudang B → Toko 3
+- $x_{23}$: Gudang B → Toko 3
 
 2.  Parameter
 
--   Kapasitas Gudang ($a_{i}$):
+- Kapasitas Gudang ($a_{i}$):
 
-    -   $a_{1} = 500$unit (Gudang A)
+  - $a_{1} = 500$unit (Gudang A)
 
-    -   $a_{2} = 400$unit (Gudang B)
+  - $a_{2} = 400$unit (Gudang B)
 
--   Permintaan Toko ($b_{j}$):
+- Permintaan Toko ($b_{j}$):
 
-    -   $b_{1} = 300$unit (Toko 1)
+  - $b_{1} = 300$unit (Toko 1)
 
-    -   $b_{2} = 250$unit (Toko 2)
+  - $b_{2} = 250$unit (Toko 2)
 
-    -   $b_{3} = 350$unit (Toko 3)
+  - $b_{3} = 350$unit (Toko 3)
 
-  ------------------------------------------------------------------------
-  $$c_{ij}$$            **Toko 1**       **Toko 2**       **Toko 3**
-  --------------------- ---------------- ---------------- ----------------
-  Gudang A              10               15               20
+  -----------------------------------------------------------
+  $$c_{ij}$$        **Toko 1**    **Toko 2**    **Toko 3**
+  ----------------- ------------- ------------- -------------
+  Gudang A          10            15            20
 
-  Gudang B              18               12               8
-  ------------------------------------------------------------------------
+  Gudang B          18            12            8
+  -----------------------------------------------------------
 
 3.  Fungsi Tujuan
 
 > Minimalkan total biaya transportasi:
 >
-> $$\text{Minimalkan\ }Z = \sum_{i = 1}^{2}{}\sum_{j = 1}^{3}{}c_{ij}x_{ij}
-> $$Dalam bentuk eksplisit:
+> $$\text{Minimalkan }Z = \sum_{i = 1}^{2}{}\sum_{j = 1}^{3}{}c_{ij}x_{ij}$$
+> Dalam bentuk eksplisit:
 >
 > $$Z = 10x_{11} + 15x_{12} + 20x_{13} + 18x_{21} + 12x_{22} + 8x_{23}$$
 
 4.  Kendala
 
-```{=html}
 <!-- -->
-```
+
 a)  Kendala Kapasitas Gudang (Supply Constraints):
 
-> $${x_{11} + x_{12} + x_{13} \leq 500(\text{Kapasitas\ Gudang\ A})
-> }{x_{21} + x_{22} + x_{23} \leq 400(\text{Kapasitas\ Gudang\ B}}$$
+> $${x_{11} + x_{12} + x_{13} \leq 500(\text{Kapasitas Gudang A})
+> }{x_{21} + x_{22} + x_{23} \leq 400(\text{Kapasitas Gudang B}}$$
 
 b)  Kendala Permintaan Toko (Demand Constraints):
 
-> $${x_{11} + x_{21} = 300\left( \text{Permintaan\ Toko\ 1} \right)
-> }{x_{12} + x_{22} = 250\left( \text{Permintaan\ Toko\ 2} \right)
-> x_{13} + x_{23} = 350(\text{Permintaan\ Toko\ 3}}$$)
+> $${x_{11} + x_{21} = 300\left( \text{Permintaan Toko 1} \right)
+> }{x_{12} + x_{22} = 250\left( \text{Permintaan Toko 2} \right)
+> x_{13} + x_{23} = 350(\text{Permintaan Toko 3}}$$)
 
 c)  Kendala Non-Negatif:
 
@@ -298,8 +307,7 @@ Model dapat direpresentasikan dalam bentuk matriks transportasi:
 
 > Untuk generalisasi, model dapat ditulis sebagai:
 >
-> $$\text{Min\ }Z = \sum_{i = 1}^{m}{}\sum_{j = 1}^{n}{}c_{ij}x_{ij}
-> $$
+> $$\text{Min }Z = \sum_{i = 1}^{m}{}\sum_{j = 1}^{n}{}c_{ij}x_{ij}$$
 
 dengan kendala:
 
@@ -310,8 +318,8 @@ dengan kendala:
 
 8.  Validasi Keseimbangan
 
-> $$\sum_{i = 1}^{2}{}a_{i} = 500 + 400 = 900 = 300 + 250 + 350 = \sum_{j = 1}^{3}{}b_{j}
-> $$Model seimbang, sehingga kendala kapasitas dapat diganti dengan
+> $$\sum_{i = 1}^{2}{}a_{i} = 500 + 400 = 900 = 300 + 250 + 350 = \sum_{j = 1}^{3}{}b_{j}$$
+> Model seimbang, sehingga kendala kapasitas dapat diganti dengan
 > persamaan (=) untuk efisiensi komputasi:
 >
 > $${x_{11} + x_{12} + x_{13} = 500
@@ -335,71 +343,73 @@ mempertimbangkan biaya terendah.
 
 a)  **Mulai dari Gudang A ke Toko 1**:
 
--   Permintaan Toko 1 = 300 unit, kapasitas Gudang A = 500 unit.
+- Permintaan Toko 1 = 300 unit, kapasitas Gudang A = 500 unit.
 
--   Alokasikan min(300, 500) = 300 unit.
+- Alokasikan min(300, 500) = 300 unit.
 
--   Sisa kapasitas Gudang A = 500 - 300 = 200 unit.
+- Sisa kapasitas Gudang A = 500 - 300 = 200 unit.
 
--   Sisa permintaan Toko 1 = 0 unit.
+- Sisa permintaan Toko 1 = 0 unit.
 
 b)  **Gudang A ke Toko 2**:
 
--   Permintaan Toko 2 = 250 unit, sisa kapasitas Gudang A = 200 unit.
+- Permintaan Toko 2 = 250 unit, sisa kapasitas Gudang A = 200 unit.
 
--   Alokasikan min(250, 200) = 200 unit.
+- Alokasikan min(250, 200) = 200 unit.
 
--   Sisa kapasitas Gudang A = 0 unit (habis).
+- Sisa kapasitas Gudang A = 0 unit (habis).
 
--   Sisa permintaan Toko 2 = 250 - 200 = 50 unit.
+- Sisa permintaan Toko 2 = 250 - 200 = 50 unit.
 
 c)  **Gudang B ke Toko 2**:
 
--   Sisa permintaan Toko 2 = 50 unit, kapasitas Gudang B = 400 unit.
+- Sisa permintaan Toko 2 = 50 unit, kapasitas Gudang B = 400 unit.
 
--   Alokasikan min(50, 400) = 50 unit.
+- Alokasikan min(50, 400) = 50 unit.
 
--   Sisa kapasitas Gudang B = 400 - 50 = 350 unit.
+- Sisa kapasitas Gudang B = 400 - 50 = 350 unit.
 
--   Sisa permintaan Toko 2 = 0 unit.
+- Sisa permintaan Toko 2 = 0 unit.
 
 d)  **Gudang B ke Toko 3**:
 
--   Permintaan Toko 3 = 350 unit, sisa kapasitas Gudang B = 350 unit.
+- Permintaan Toko 3 = 350 unit, sisa kapasitas Gudang B = 350 unit.
 
--   Alokasikan min(350, 350) = 350 unit.
+- Alokasikan min(350, 350) = 350 unit.
 
--   Sisa kapasitas Gudang B = 0 unit (habis).
+- Sisa kapasitas Gudang B = 0 unit (habis).
 
--   Sisa permintaan Toko 3 = 0 unit.
+- Sisa permintaan Toko 3 = 0 unit.
 
-  ------------------------------------------------------------------------
-  **Dari/Ke**         **Toko 1** **Toko 2** **Toko 3** **Total Dikirim**
-  ------------------- ---------- ---------- ---------- -------------------
-  Gudang A            300        200        0          500
+  ------------------------------------------------------
+  **Dari/Ke**   **Toko   **Toko   **Toko   **Total
+                1**      2**      3**      Dikirim**
+  ------------- -------- -------- -------- -------------
+  Gudang A      300      200      0        500
 
-  Gudang B            0          50         350        400
+  Gudang B      0        50       350      400
 
-  Total Diterima      300        250        350        
-  ------------------------------------------------------------------------
+  Total         300      250      350      
+  Diterima                                 
+  ------------------------------------------------------
 
 Tabel Alokasi Awal**:**
 
 **Perhitungan Biaya Total**:
 
--   Gudang A ke Toko 1: 300 × 10 = 3,000 ribu Rupiah
+- Gudang A ke Toko 1: 300 × 10 = 3,000 ribu Rupiah
 
--   Gudang A ke Toko 2: 200 × 15 = 3,000 ribu Rupiah
+- Gudang A ke Toko 2: 200 × 15 = 3,000 ribu Rupiah
 
--   Gudang A ke Toko 3: 0 × 20 = 0 ribu Rupiah
+- Gudang A ke Toko 3: 0 × 20 = 0 ribu Rupiah
 
--   Gudang B ke Toko 1: 0 × 18 = 0 ribu Rupiah
+- Gudang B ke Toko 1: 0 × 18 = 0 ribu Rupiah
 
--   Gudang B ke Toko 2: 50 × 12 = 600 ribu Rupiah
+- Gudang B ke Toko 2: 50 × 12 = 600 ribu Rupiah
 
--   Gudang B ke Toko 3: 350 × 8 = 2,800 ribu Rupiah
+- Gudang B ke Toko 3: 350 × 8 = 2,800 ribu Rupiah
 
--   **Total Biaya**: 9,400 ribu Rupiah
+- **Total Biaya**: 9,400 ribu Rupiah
 
 **Tools/Software: Python dengan PuLP**
 
@@ -472,54 +482,56 @@ print(\"x23:\", pulp.value(x23))
 Hasil Eksekusi (berdasarkan simulasi, karena library PuLP tersedia dalam
 environment):
 
-![](./image2.png){width="5.923611111111111in"
+![](media/image2.png){width="5.923611111111111in"
 height="2.2430555555555554in"}
 
--   Status: Optimal
+- Status: Optimal
 
--   Total Biaya Optimal: 10,100 ribu Rupiah
+- Total Biaya Optimal: 10,100 ribu Rupiah
 
--   Pengiriman:
+- Pengiriman:
 
-    -   x11: 300.0
+  - x11: 300.0
 
-    -   x12: 0.0
+  - x12: 0.0
 
-    -   x13: 200.0
+  - x13: 200.0
 
-    -   x21: 0.0
+  - x21: 0.0
 
-    -   x22: 250.0
+  - x22: 250.0
 
-    -   x23: 150.0
+  - x23: 150.0
 
 **Tabel Alokasi Optimal (Python):**
 
-  ------------------------------------------------------------------------
-  **Dari/Ke**         **Toko 1** **Toko 2** **Toko 3** **Total Dikirim**
-  ------------------- ---------- ---------- ---------- -------------------
-  Gudang A            300        0          200        500
+  ------------------------------------------------------
+  **Dari/Ke**   **Toko   **Toko   **Toko   **Total
+                1**      2**      3**      Dikirim**
+  ------------- -------- -------- -------- -------------
+  Gudang A      300      0        200      500
 
-  Gudang B            0          250        150        400
+  Gudang B      0        250      150      400
 
-  Total Diterima      300        250        350        
-  ------------------------------------------------------------------------
+  Total         300      250      350      
+  Diterima                                 
+  ------------------------------------------------------
 
 **Perhitungan Biaya Total:**
 
--   300 × 10 = 3,000
+- 300 × 10 = 3,000
 
--   0 × 15 = 0
+- 0 × 15 = 0
 
--   200 × 20 = 4,000
+- 200 × 20 = 4,000
 
--   0 × 18 = 0
+- 0 × 18 = 0
 
--   250 × 12 = 3,000
+- 250 × 12 = 3,000
 
--   150 × 8 = 1,200
+- 150 × 8 = 1,200
 
--   **Total**: 10,100 ribu Rupiah
+- **Total**: 10,100 ribu Rupiah
 
 **Tools/Software: Excel Solver**
 
@@ -532,81 +544,79 @@ Di Excel, model dibangun sebagai berikut (step by step simulasi):
 
 3.  Tambahkan kendala:
 
-    -   Baris: SUM(B2:D2) \<= 500 (Gudang A), SUM(B3:D3) \<= 400 (Gudang
-        B).
+    - Baris: SUM(B2:D2) \<= 500 (Gudang A), SUM(B3:D3) \<= 400 (Gudang
+      B).
 
-    -   Kolom: SUM(B2:B3) = 300 (Toko 1), SUM(C2:C3) = 250 (Toko 2),
-        SUM(D2:D3) = 350 (Toko 3).
+    - Kolom: SUM(B2:B3) = 300 (Toko 1), SUM(C2:C3) = 250 (Toko 2),
+      SUM(D2:D3) = 350 (Toko 3).
 
 4.  Jalankan Solver: Set target cell G2 (minimasi), variabel B2:D3,
     kendala seperti di atas, metode Simplex LP.
 
 **Hasil (berdasarkan simulasi)**:
 
--   Sama dengan PuLP: Total biaya 10,100 ribu Rupiah.
+- Sama dengan PuLP: Total biaya 10,100 ribu Rupiah.
 
--   Alokasi: x11=300, x12=0, x13=200, x21=0, x22=250, x23=150.
+- Alokasi: x11=300, x12=0, x13=200, x21=0, x22=250, x23=150.
 
 **Tabel Alokasi Optimal (Excel)**:
 
-  ------------------------------------------------------------------------
-  **Dari/Ke**         **Toko 1** **Toko 2** **Toko 3** **Total Dikirim**
-  ------------------- ---------- ---------- ---------- -------------------
-  Gudang A            300        0          200        500
+  ------------------------------------------------------
+  **Dari/Ke**   **Toko   **Toko   **Toko   **Total
+                1**      2**      3**      Dikirim**
+  ------------- -------- -------- -------- -------------
+  Gudang A      300      0        200      500
 
-  Gudang B            0          250        150        400
+  Gudang B      0        250      150      400
 
-  Total Diterima      300        250        350        
-  ------------------------------------------------------------------------
+  Total         300      250      350      
+  Diterima                                 
+  ------------------------------------------------------
 
 **Perhitungan Biaya Total**: Sama seperti Python (10,100 ribu Rupiah).
 
 b)  Hasil dan Interpretasinya
 
--   **Hasil Manual**: Biaya 9,400 ribu Rupiah. Interpretasi: Solusi
-    feasible tapi tidak optimal, karena memprioritaskan urutan alokasi
-    daripada biaya rendah (misalnya, terlalu banyak pengiriman dari
-    Gudang A ke Toko 2 dengan biaya 15, sementara Gudang B ke Toko 2
-    lebih murah di 12).
+- **Hasil Manual**: Biaya 9,400 ribu Rupiah. Interpretasi: Solusi
+  feasible tapi tidak optimal, karena memprioritaskan urutan alokasi
+  daripada biaya rendah (misalnya, terlalu banyak pengiriman dari Gudang
+  A ke Toko 2 dengan biaya 15, sementara Gudang B ke Toko 2 lebih murah
+  di 12).
 
--   **Hasil Python (PuLP)**: Biaya 10,100 ribu Rupiah. Interpretasi:
-    Solusi optimal, memanfaatkan rute murah seperti Gudang A ke Toko 1
-    (semua 300 unit) dan Gudang B ke Toko 2 (semua 250 unit), dengan
-    pembagian ke Toko 3 (200 dari A, 150 dari B) untuk seimbang. Total
-    biaya lebih tinggi dari manual karena algoritma memastikan minimasi
-    global.
+- **Hasil Python (PuLP)**: Biaya 10,100 ribu Rupiah. Interpretasi:
+  Solusi optimal, memanfaatkan rute murah seperti Gudang A ke Toko 1
+  (semua 300 unit) dan Gudang B ke Toko 2 (semua 250 unit), dengan
+  pembagian ke Toko 3 (200 dari A, 150 dari B) untuk seimbang. Total
+  biaya lebih tinggi dari manual karena algoritma memastikan minimasi
+  global.
 
--   **Hasil Excel Solver**: Biaya 10,100 ribu Rupiah. Interpretasi: Sama
-    dengan PuLP, menunjukkan solusi linier yang konsisten. Excel
-    memberikan visualisasi mudah untuk matriks alokasi.
+- **Hasil Excel Solver**: Biaya 10,100 ribu Rupiah. Interpretasi: Sama
+  dengan PuLP, menunjukkan solusi linier yang konsisten. Excel
+  memberikan visualisasi mudah untuk matriks alokasi.
 
 Secara keseluruhan, solusi optimal menghemat biaya dengan fokus pada
 rute efisien, memenuhi semua permintaan tanpa melebihi kapasitas.
 
 c)  Perbandingan Solusi dari Dua Software (Excel vs Python)
 
--   **Kesamaan**: Kedua software memberikan hasil identik (biaya 10,100
-    ribu Rupiah, alokasi sama) karena model linier sederhana dan
-    algoritma Simplex LP yang digunakan keduanya.
+- **Kesamaan**: Kedua software memberikan hasil identik (biaya 10,100
+  ribu Rupiah, alokasi sama) karena model linier sederhana dan algoritma
+  Simplex LP yang digunakan keduanya.
 
--   **Perbedaan**:
+- **Perbedaan**:
 
-```{=html}
 <!-- -->
-```
--   **Python (PuLP)**: Lebih fleksibel untuk otomatisasi, scripting, dan
-    analisis sensitivitas berulang (misalnya, modifikasi kode untuk
-    skenario baru). Cocok untuk data besar atau integrasi dengan program
-    lain. Waktu eksekusi cepat untuk kasus ini.
 
--   **Excel Solver**: Lebih intuitif untuk pengguna non-programmer,
-    dengan visualisasi langsung (tabel, grafik). Mudah untuk presentasi,
-    tapi kurang efisien untuk model kompleks atau otomatisasi (harus
-    setup ulang secara manual).
+- **Python (PuLP)**: Lebih fleksibel untuk otomatisasi, scripting, dan
+  analisis sensitivitas berulang (misalnya, modifikasi kode untuk
+  skenario baru). Cocok untuk data besar atau integrasi dengan program
+  lain. Waktu eksekusi cepat untuk kasus ini.
+
+- **Excel Solver**: Lebih intuitif untuk pengguna non-programmer, dengan
+  visualisasi langsung (tabel, grafik). Mudah untuk presentasi, tapi
+  kurang efisien untuk model kompleks atau otomatisasi (harus setup
+  ulang secara manual).
 
 **Kesimpulan**: Python unggul dalam skalabilitas, sementara Excel lebih
 baik untuk prototyping cepat. Untuk proyek ini, keduanya valid dan
 saling melengkapi.
-
-
-
