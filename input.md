@@ -62,9 +62,7 @@ DAFTAR ISI**
 
 2.  **Rumusan Masalah**
 
-```{=html}
-<!-- -->
-```
+
 1.  Bagaimana merumuskan model matematis untuk mengoptimalkan alokasi
     pengiriman barang guna meminimalkan total biaya transportasi, dengan
     mempertimbangkan kendala kapasitas gudang dan permintaan toko?
@@ -83,14 +81,8 @@ DAFTAR ISI**
     meningkatkan efisiensi sistem distribusi berdasarkan analisis
     sensitivitas dan hasil optimasi?
 
-```{=html}
-<!-- -->
-```
 3.  **Tujuan Proyek**
 
-```{=html}
-<!-- -->
-```
 1.  Menemukan alokasi pengiriman optimal yang meminimalkan total biaya
     transportasi.
 
@@ -100,9 +92,6 @@ DAFTAR ISI**
 3.  Memberikan rekomendasi strategis untuk meningkatkan efisiensi
     operasional distribusi RetailOptima.
 
-```{=html}
-<!-- -->
-```
 4.  **Manfaat dan ruang lingkup**
 
 > Proyek \"Analisis dan Optimasi Sistem Distribusi Barang pada
@@ -162,13 +151,13 @@ unit). Total pasokan (900 unit) sama dengan total permintaan (900 unit),
 menjadikan ini masalah transportasi seimbang. Biaya transportasi per
 unit (dalam ribu Rupiah) adalah sebagai berikut:
 
- | -------------------------------------------------------------------------|
- | Dari/Ke        |        Toko 1      |     Toko 2      |     Toko 3       |
- | ---------------------- ---------------- ---------------- ---------------- |
- | Gudang A       |        10          |     15          |      20          |
+  -------------------------------------------------------------------------
+  Dari/Ke                Toko 1           Toko 2           Toko 3       
+  ---------------------- ---------------- ---------------- ---------------- 
+  Gudang A               10               15                20          
 
- | Gudang B       |        18          |     12          |       8          |
- | ------------------------------------------------------------------------- |
+  Gudang B               18               12                 8          
+  ------------------------------------------------------------------------- 
 
 Alokasi:
 
@@ -618,5 +607,6 @@ c)  Perbandingan Solusi dari Dua Software (Excel vs Python)
 **Kesimpulan**: Python unggul dalam skalabilitas, sementara Excel lebih
 baik untuk prototyping cepat. Untuk proyek ini, keduanya valid dan
 saling melengkapi.
+
 
 
